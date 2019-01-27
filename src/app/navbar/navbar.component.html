@@ -1,0 +1,55 @@
+<nav 
+	class="pl-1 pr-1 pl-md-5 pr-md-5 navbar Kualie d-flex justify-content-center"
+	[class.alternative]="scrollTop > 20"
+>
+    <!-- Nav Desktop -->
+	<div class="d-none d-sm-flex col-12 col-md-10">
+        <div class="col-4 d-flex">
+            <div class="p-4" [class.active]="url === '/'">
+                <a [routerLink]="'/'">Home</a>
+            </div>
+        </div>
+
+        <div class="col-8 d-flex justify-content-end">
+            <div class="p-4" [class.active]="url === '/portfolio'">
+                <a [routerLink]="'/portfolio'">Portafolio</a>
+            </div>
+            <div class="p-4" [class.active]="url === '/contact'">
+                <a [routerLink]="'/contact'">Contacto</a>
+            </div>
+        </div>
+	</div>
+
+    <!-- Nav Mobile -->
+    <div class="d-sm-none col-12 nav-mobile">
+        <div class="d-flex">
+            <div class="col-6 pl-0">
+                <div class="p-4 text-white text-uppercase">
+                    <strong>{{ urlTitle }}</strong>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="py-4 text-white text-right">
+                    <i class="fa fa-2x fa-list" (click)="showMenu = !showMenu"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="showMenu">
+            <div class="">
+                <div class="p-4" [class.active]="url === '/'">
+                    <a [routerLink]="'/'" (click)="showMenu = false">Home</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="p-4" [class.active]="url === '/portfolio'">
+                    <a [routerLink]="'/portfolio'" (click)="showMenu = false">Portafolio</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="p-4" [class.active]="url === '/contact'">
+                    <a [routerLink]="'/contact'" (click)="showMenu = false">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

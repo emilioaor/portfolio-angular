@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center" (click)="onFocus()">
+  <div class="terminal col-11 col-sm-10 col-lg-8 col-xl-6" id="terminal">
+      <div *ngFor="let command of commandHistory">
+          <p [class.output]="command.typeComamnd === 'output'">{{ command.text }}</p>
+      </div>
+      <div class="d-flex align-items-start justify-content-start">
+          <div>
+              <p class="mr-2">{{ base }}</p>
+          </div>
+          <div>
+              <input
+                      type="text"
+                      id="commandInput"
+                      [formControl]="commandControl"
+                      (keypress)="sendCommand($event)"
+              >
+          </div>
+      </div>
+  </div>
+</div>

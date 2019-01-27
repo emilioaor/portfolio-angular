@@ -1,0 +1,37 @@
+.terminal {
+    background-color: rgba(0,0,0,.3);
+    border: solid 2px #222;
+    padding: .5rem;
+    height: 10rem;
+    overflow: auto;
+    p {
+        font-size: 13px;
+        margin: 0;
+    }
+    .pointer {
+        border-left: solid 4px #ffffff;
+        height: 1rem;
+        margin-left: .4rem;
+        animation: pointer-effect 1s infinite;
+        -webkit-animation: pointer-effect 1s infinite;
+        -moz-animation: pointer-effect 1s infinite;
+        -o-animation: pointer-effect 1s infinite;
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        position: relative;
+        top: -3px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .output {
+        font-size: 12px;
+        color: #ccc;
+    }
+}

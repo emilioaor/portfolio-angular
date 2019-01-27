@@ -1,0 +1,122 @@
+<section class="mt-5 container-fluid">
+
+    <h2 class="Kualie text-center">¿Quien soy?</h2>
+
+    <div class="Nunito pt-3 p-md-5">
+
+        <div class="info">
+
+            <div class="d-flex flex-wrap">
+
+                <div class="col-12 col-lg-6">
+
+                    <h4 class="Kualie mb-4">Informaci&oacute;n</h4>
+
+                    <div class="d-flex flex-wrap mt-1 mb-4">
+                        <div class="tab col-12 col-sm-6 p-0 mb-3 mb-sm-0 Kualie" [class.active]="showPersonalInfo" (click)="showPersonalInfo = true">
+                            <div class="text  p-2 mr-1">Datos personales</div>
+                            <div class="pointer d-none d-sm-block" *ngIf="showPersonalInfo"></div>
+                        </div>
+                        <div class="tab col-12 col-sm-6 p-0 Kualie" [class.active]="! showPersonalInfo" (click)="showPersonalInfo = false">
+                            <div class="text  p-2 mr-1">Acerca de mi</div>
+                            <div class="pointer d-none d-sm-block" *ngIf="! showPersonalInfo"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap flex-sm-nowrap pt-3" *ngIf="showPersonalInfo">
+
+                        <div class="d-flex flex-wrap col-12 col-sm-9 personal-info">
+                            <div class="w-50 pb-3">
+                                <span>Nombres:</span><br>
+                                {{ myInfo.name }}
+                            </div>
+                            <div class="w-50 pb-3">
+                                <span>Apellidos:</span><br>
+                                {{ myInfo.lastName }}
+                            </div>
+                            <div class="w-50 pb-3">
+                                <span>Cedula:</span><br>
+                                {{ myInfo.dni }}
+                            </div>
+                            <div class="w-50 pb-3">
+                                <span>Fecha de nacimiento:</span><br>
+                                {{ myInfo.birthDate }}
+                            </div>
+                            <div class="w-50 pb-3">
+                                <span>Nacionalidad:</span><br>
+                                {{ myInfo.country }}
+                            </div>
+                            <div class="w-50 pb-3">
+                                <span>Lugar de nacimiento:</span><br>
+                                {{ myInfo.origin }}
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-3">
+                            <img class="img-thumbnail w-100" [src]="'assets/img/Yo.jpg'">
+                        </div>
+                    </div>
+
+                    <p class="text-justify mb-5 pt-3" *ngIf="! showPersonalInfo">
+                        Mi nombre es Emilio Ochoa, soy informático apasionado
+                        por la programación y sobretodo por el desarrollo web.
+                        Desde siempre una persona autodidacta lo cual me permite
+                        avanzar constantemente en mis conocimientos y resolver
+                        oportunamente distintos problemas que pueden surgir durante
+                        un proyecto. Responsable y dedicado con mi trabajo pongo
+                        todo mi empeño en lograr los mejores resultados con calidad
+                        profesional.
+                    </p>
+
+                    <hr class="mt-sm-0">
+
+                    <div class="mt-2 d-flex">
+
+
+                        <div class="w-100 d-flex ">
+                            <a class="rrss" href="https://github.com/emilioaor" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                            <a class="rrss" href="https://www.linkedin.com/in/emilioaor" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                            <a class="rrss" href="https://www.facebook.com/emilioaor" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 pl-lg-5">
+                    <div class="skills mt-5 mt-lg-0 pb-4 pb-lg-0">
+                        <h4 class="Kualie mb-4">Habilidades</h4>
+
+                        <div class="d-flex flex-wrap">
+
+                            <!-- Skill item -->
+                            <div class="col-12 col-sm-6 p-2" *ngFor="let skill of skills">
+                                <p class="pr-4">
+                                    {{ skill.name }}
+                                </p>
+
+                                <div class="progress">
+                                    <div
+                                            class="progress-bar progress-bar-success progress-bar-striped"
+                                            role="progressbar"
+                                            aria-valuenow="40"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100" [ngStyle]="{width: skill.percentage + '%'}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,96 @@
+h4 {
+  color: #212529;
+  text-decoration: underline;
+}
+
+.info {
+  color: #212529;
+  .personal-info {
+    > div {
+      @media (max-width: 399px) {
+        width: 100% !important;
+        br {
+          display: none;
+        }
+      }
+    }
+    span {
+      font-weight: 600;
+      font-size: 13px;
+      color: #555;
+    }
+  }
+  .btn-primary {
+    background-color: #212529;
+    border-color: #212529;
+  }
+  .rrss {
+    background-color: #212529;
+    display: inline-block;
+    padding: .3rem .8rem;
+    color: #ffffff;
+    border-radius: 10%;
+    border: solid 1px #212529;
+    margin: 0 .5rem;
+    font-size: 20px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
+    &:hover {
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+      -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+      -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+      box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+    }
+  }
+
+  img {
+    max-width: 170px;
+  }
+
+  .tab {
+    position: relative;
+    opacity: .5;
+    &.active {
+      opacity: 1;
+    }
+    .text {
+      background-color: #212529;
+      color: #ffffff;
+      border-radius: .5rem;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      text-align: center;
+    }
+    .pointer {
+      position: absolute;
+      left: 47%;
+      background-color: #212529;
+      width: 20px;
+      height: 20px;
+      bottom: -10px;
+      z-index: 5;
+      -webkit-transform: rotateZ(-45deg);
+      -moz-transform: rotateZ(-45deg);
+      -ms-transform: rotateZ(-45deg);
+      -o-transform: rotateZ(-45deg);
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+.skills {
+  p {
+    margin-bottom: 0;
+  }
+  .progress-bar {
+    background-color: #E54028;
+  }
+}

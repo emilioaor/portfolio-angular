@@ -1,0 +1,30 @@
+.contact-form {
+  label {
+    font-weight: bold;
+    color: #212529;
+  }
+  input, textarea {
+    border: solid 1px #212529;
+    &:hover, &:focus, &:active {
+      outline: none;
+    }
+  }
+  input {
+    height: 3rem;
+  }
+  button {
+    background-color: #E54028;
+    border: solid 1px #212529;
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  .error {
+    color: #E54028;
+    font-size: 12px;
+    position: absolute;
+  }
+  .input-error {
+    border-color: #E54028;
+  }
+}

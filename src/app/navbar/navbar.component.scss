@@ -1,0 +1,41 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1024;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s ;
+    -o-transition: all .5s;
+    transition: all .5s;
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+            color: #E54028;
+        }
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    .active a {
+        
+    }
+    > div {
+        border-bottom: solid 1px rgba(255,255,255,.3);
+    }
+
+    &.alternative {
+        background-color: rgba(0,0,0,.7);
+        border-color: #ffffff;
+    }
+    @media (max-width: 575px) {
+        background-color: #000;
+        border-color: #ffffff;
+    }
+}
+.nav-mobile {
+    font-size: 20px;
+}

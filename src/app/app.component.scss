@@ -1,0 +1,24 @@
+.header {
+    background-image: url(../assets/img/bg.jpg);
+    background-size: cover;
+    color: #ffffff;
+    &-title {
+        text-align: center;
+        font-size: 110px;
+        margin-top: 4.3rem;
+        @media (max-width: 1199px) { font-size: 90px }
+        @media (max-width: 899px) { font-size: 70px }
+        @media (max-width: 799px) { font-size: 60px }
+        @media (max-width: 699px) { font-size: 40px }
+        @media (max-width: 499px) { font-size: 30px }
+    }
+    .separator {
+        border-bottom: solid 5px #E54028;
+        margin: 1rem 0;
+    }
+    p {
+        font-size: 20px;
+        max-width: 50rem;
+        text-align: center;
+    }
+}

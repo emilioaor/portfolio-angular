@@ -1,0 +1,60 @@
+.portfolio {
+  .portfolio-item {
+    h5 {
+      color: #212529;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    p {
+      color: #6c757d;
+    }
+
+    a {
+      color: #eee;
+    }
+    .tabs {
+      .tab {
+        cursor: pointer;
+        color: #ffffff;
+        opacity: .5;
+        &.active {
+          opacity: 1;
+        }
+
+        .text {
+          border: solid 1px #212529;
+          background-color: #212529;
+          z-index: 2;
+          position: relative;
+        }
+
+        .pointer {
+          width: 20px;
+          height: 20px;
+          background-color: #212529;
+          transform: rotateZ(-45deg);
+          -webkit-transform: rotateZ(-45deg);
+          -moz-transform: rotateZ(-45deg);
+          -o-transform: rotateZ(-45deg);
+          -ms-transform: rotateZ(-45deg);
+          position: absolute;
+          left: 45%;
+          bottom: -8px;
+          z-index: 0;
+        }
+      }
+    }
+
+    .tab-content {
+      > div {
+        color: #6c757d;
+        height: 6.5rem;
+      }
+    }
+
+    .line {
+      border-bottom: solid 3px #6c757d;
+      margin-bottom: 1rem;
+    }
+  }
+}
